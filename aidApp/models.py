@@ -1,13 +1,14 @@
 from django.db import models
 class Doctors(models.Model):
-    doctor_full_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    last_name= models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     clinic = models.CharField(max_length=50)
     pharmacy = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.doctor_full_name
+        return self.last_name
 
 class Clinics(models.Model):
     clinic_name = models.CharField(max_length=50)
@@ -31,7 +32,7 @@ class Patients(models.Model):
     patient_full_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
-    doctor_full_name = models.ForeignKey(Doctors, null=True, on_delete=models.SET_NULL)
+    doctor_last_name = models.ForeignKey(Doctors, null=True, on_delete=models.SET_NULL)
     clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
     pharmacy = models.ForeignKey(Pharmacies, null=True, on_delete=models.SET_NULL)
     phone_number = models.CharField(max_length=50)
@@ -40,18 +41,18 @@ class Patients(models.Model):
     def __str__(self):
         return self.patient_full_name
 
-class Admin(models.Model):
-    admin_full_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
-    pharmacy = models.ForeignKey(Pharmacies, null=True, on_delete=models.SET_NULL)
+# class Admin(models.Model):
+#     admin_full_name = models.CharField(max_length=50)
+#     email = models.CharField(max_length=50)
+#     password = models.CharField(max_length=50)
+#     clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
+#     pharmacy = models.ForeignKey(Pharmacies, null=True, on_delete=models.SET_NULL)
     
-    def __str__(self):
-        return self.admin_full_name
+#     def __str__(self):
+#         return self.admin_full_name
 
 class Consultations(models.Model):
-    doctor_full_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
+    doctor_last_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
     patient_full_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
     clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
     pharmacy = models.ForeignKey(Pharmacies, null=True, on_delete=models.SET_NULL)
