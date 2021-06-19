@@ -29,7 +29,8 @@ class Pharmacies(models.Model):
         return self.pharmacy_name
 
 class Patients(models.Model):
-    patient_full_name = models.CharField(max_length=50)
+    patient_first_name = models.CharField(max_length=50)
+    patient_last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     doctor_last_name = models.ForeignKey(Doctors, null=True, on_delete=models.SET_NULL)
@@ -39,7 +40,7 @@ class Patients(models.Model):
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.patient_full_name
+        return self.last_name
 
 # class Admin(models.Model):
 #     admin_full_name = models.CharField(max_length=50)
@@ -53,7 +54,7 @@ class Patients(models.Model):
 
 class Consultations(models.Model):
     doctor_last_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
-    patient_full_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
+    patient_last_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
     clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
     pharmacy = models.ForeignKey(Pharmacies, null=True, on_delete=models.SET_NULL)
     month = models.CharField(max_length=10)
@@ -61,10 +62,10 @@ class Consultations(models.Model):
     time = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.patient_full_name
+        return self.patient_last_name
 
 class Feedback_Complaint(models.Model):
-    patient_full_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
+    patient_first_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
     feedback_or_complaint = models.CharField(max_length=10)
     patient_message = models.CharField(max_length=200)
     admin_reply = models.CharField(max_length=200)
