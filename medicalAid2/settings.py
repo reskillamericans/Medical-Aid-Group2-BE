@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'medicalAid2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'medical-aid-backendpython2',
         'USER': 'pythontest',
         'PASSWORD': 'pdai2@2o21SA',
