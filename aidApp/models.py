@@ -72,3 +72,10 @@ class Feedback_Complaint(models.Model):
 
     def __str__(self):
         return self.feedback_or_complaint
+
+class FAQ(models.Model):
+    question = models.CharField(max_length=400)
+    answer = models.CharField(max_length=400)
+
+    def __str__(self):
+        return self.question
