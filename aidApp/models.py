@@ -78,4 +78,4 @@ class FAQ(models.Model):
     answer = models.CharField(max_length=400)
 
     def __str__(self):
-        return self.question
+        return self.question 
