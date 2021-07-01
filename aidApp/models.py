@@ -30,8 +30,8 @@ class Pharmacies(models.Model):
         return self.pharmacy_name
 
 class Patients(models.Model):
-    patient_first_name = models.CharField(max_length=50)
-    patient_last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     doctor_last_name = models.ForeignKey(Doctors, null=True, on_delete=models.SET_NULL)
