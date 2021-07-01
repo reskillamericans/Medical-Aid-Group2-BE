@@ -17,6 +17,9 @@ class Clinics(models.Model):
     clinic_name = models.CharField(max_length=50)
     open_hours = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
@@ -26,6 +29,9 @@ class Pharmacies(models.Model):
     pharmacy_name = models.CharField(max_length=50)
     open_hours = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
