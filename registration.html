@@ -1,16 +1,73 @@
- {% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="Registration2.css">
+    <link rel="icon" href="./images/registration-image/Group.svg" type="image/svg+xml">
+    <title>
+        Registration Page </title>
+</head>
+<body>
 
- {% block content %}
+   <div class="header">
+        <span id="logo">
+            <img class="a" src="./images/registration-image/Group.svg">
+        </span>
 
- {% if registered %}
-       <h1>Thank you for registering</h1>
-    {% else %}
-         <h3>Fill in the form</h3>
-         <form method="post" enctype="multipart/form-data">
-           {% csrf_token %}
-           {{ user_form }}
-           {{ profile_form }}
-           <input type="submit" value="Register" class=" btn btn-primary btn-block">
-         </form>
-    {% endif %}
- {% endblock %}
+        <div class="text-only">
+            <a class="logo-text" href="#" id="nav-logo">Empr Medical</a>
+        </div>
+
+    </div>
+
+    <div class="flex-container">
+        <div class="image">
+            <img class="doc-img" src="./images/registration-image/Doctor 4.svg">
+        </div>
+
+
+            <div class="container">
+                <div class="signup-heading">
+                    <p>Sign up</p>
+                </div>
+
+                <form action="registration.php">
+
+
+                    <div class="name-container">
+                        <input type="text" class="fname" name="fname" placeholder="First Name" required><br>
+                        <input type="text" class="lname" name="lname" placeholder="Last Name" required><br>
+                    </div>
+
+                    <input type="tel" class="phone" name="phone" placeholder="Phone Number" required><br>
+                    <input type="email" class="email2" name="email2" placeholder="Enter Email Address" required><br>
+                    <input type="password" class="cpwd" name="cpwd" placeholder="Create a Password" required>
+
+                    <div class="pass">
+                        <p>Password must be between 8-16 characters</p>
+                        <p>Password can include the following: numbers, letters, !, ., #.</p>
+                    </div>
+
+                   <div class="check-box">
+                        <input type="checkbox" class="chkbx2" name="chkbx">
+                        <label for="chkbx"></label>I agree with Empr Medical's privacy policy.</label><br><br>
+                    </div>
+
+
+                        <button class="signup-btn">Sign Up</button>
+
+                </form>
+            </div>
+
+     </div>
+
+
+</div>
+
+</body>
+</html>
