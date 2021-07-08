@@ -1,8 +1,12 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
+from django.conf import settings
+from django.contrib.auth.models import User # new
+
 
 class Doctors(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE) #new
     first_name = models.CharField(max_length=50)
     last_name= models.CharField(max_length=50)
     email = models.CharField(max_length=50)
@@ -38,6 +42,7 @@ class Pharmacies(models.Model):
         return self.pharmacy_name
 
 class Patients(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE) #new
     first_name = models.CharField(max_length=50)
     patient_last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
