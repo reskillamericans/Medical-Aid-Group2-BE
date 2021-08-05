@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+
+
 def index(request):
-    return HttpResponse("<h1>Medical Aid 2 app Homepage</h1>")
+    return render(request, 'aidApp/index.html')
+
+
+def about_us(request):
+    return render(request, 'aidApp/about-us.html')
