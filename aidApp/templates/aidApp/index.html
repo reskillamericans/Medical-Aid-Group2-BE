@@ -16,14 +16,19 @@
 
 </head>
 
-
 <body>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
 
     <header>
 
         <!-- <img src="images/landing-page/medical-logo.svg" >
             <h2>Empr Medical</h2>
-            <a href="index.html" class="selected">Home</a>
+            <a href="{% url 'homepage' %}" class="selected">Home</a>
             <a href="About-Us.html">About Us</a>
             <a href="#">Services</a>
             <a href="#">Careers</a>
@@ -35,11 +40,11 @@
                 </button>
 
                 <div class="dropdown-content">
-                    <a href="index.html" class="selected">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="login.html">Login</a>
-                    <a href="registration.html">Sign Up</a>
+                    <a href="{% url 'homepage' %}" class="selected">Home</a>
+                    <a href="{% url 'about-us' %}">About Us</a>
+                    <a href="{% url 'faq' %}">FAQ</a>
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'sign-up' %}">Sign Up</a>
 
                 </div>
             </div>
@@ -51,11 +56,11 @@
         </div>
 
         <div class="no-dropdown">
-            <a href="index.html" class="selected">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="login.html">Login</a>
-            <a href="registration.html">Sign Up</a>
+            <a href="{% url 'homepage' %}" class="selected">Home</a>
+            <a href="{% url 'about-us' %}">About Us</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'sign-up' %}">Sign Up</a>
 
         </div>
 
@@ -69,9 +74,9 @@
             <p> Designed with you in mind, we offer multiple options that allow you
                 to feel empowerd in relation to your health care needs.
             </p>
-            <a href="login.html" class="login">Login</a>
+            <a href="{% url 'login' %}" class="login">Login</a>
 
-            <a href="registration.html" class="signup">Sign Up</a>
+            <a href="{% url 'sign-up' %}" class="signup">Sign Up</a>
 
         </div>
     </section>
@@ -224,17 +229,18 @@
 
 
         <div class="form">
-            <form class="form1">
+            <form class="form1" method="post">
+                {% csrf_token %}
                 <h1 class="contact">Contact Us</h1>
-                <input type="text" id="fname" name="fname" value="First Name">
-                <input type="text" id="last-name" name="last-name" value="Last Name"><br>
-                <input type="text" id="enter-email" name="enter-email" value="Enter Email"><br>
-                <input type="text" id="message" name="message" value="Message"><br>
-                <input type="checkbox" id="checkbox">
+                <input type="text" id="fname" name="first_name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" required><br>
+                <input type="email" id="enter-email" name="email" placeholder="Enter Email" required><br>
+                <input type="text" id="message" name="message" placeholder="Message" required><br>
+                <input type="checkbox" id="checkbox" required>
                 <label for="checkbox"> I agree with Empr Medical's private policy</label>
-            </form>
 
-            <button>Submit</button>
+                <button name="contact-us">Submit</button>
+            </form>
 
         </div>
     </section>
@@ -244,11 +250,12 @@
     <section class="section8">
 
         <h1> Subscribe to our <span>Newsletter!</span></h1>
-
-        <input type="text" id="first-name" name="first-name" value="Enter Name"><br>
-        <input type="text" id="email" name="email" value="Enter Email"><br>
-
-        <button>Sign Up</button>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="first-name" name="name" placeholder="Enter Name" required><br>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required><br>
+            <button name="newsletter">Sign Up</button>
+        </form>
 
     </section>
 
@@ -292,21 +299,21 @@
 
         <div class="footer2">
 
-            <a href="about-us.html">About</a>
-            <a href="index.html">Patient Portal</a>
+            <a href="{% url 'about-us' %}">About</a>
+            <a href="{% url 'homepage' %}">Patient Portal</a>
             <a href="#">News Room</a>
-            <a href="index.html">Contact Us</a>
+            <a href="{% url 'homepage' %}">Contact Us</a>
         </div>
 
         <div class="footer3">
-            <a href="index.html">Find A Provider</a>
-            <a href="index.html">Empr Medical Health Care</a>
-            <a href="index.html">Locations</a>
-            <a href="index.html">Careers</a>
+            <a href="{% url 'homepage' %}">Find A Provider</a>
+            <a href="{% url 'homepage' %}">Empr Medical Health Care</a>
+            <a href="{% url 'homepage' %}">Locations</a>
+            <a href="{% url 'homepage' %}">Careers</a>
         </div>
 
         <div class="footer4">
-            <a href="index.html">Notice of Privacy</a>
+            <a href="{% url 'homepage' %}">Notice of Privacy</a>
 
         </div>
 

@@ -92,6 +92,14 @@ class FAQ(models.Model):
         return self.question
 
 
+class Newsletter(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True, null=False)
+
+    def __str__(self):
+        return self.email
+
+
 class ContactUs(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -100,12 +108,4 @@ class ContactUs(models.Model):
     time_sent = models.TimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
-        return self.time_sent
-
-
-class Newsletter(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.email
+        return str(self.time_sent)

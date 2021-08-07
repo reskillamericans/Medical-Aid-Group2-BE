@@ -21,5 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', aid_app_views.index, name="homepage"),
     path('about-us/', aid_app_views.about_us, name="about-us"),
+    path('faq/', aid_app_views.faq, name="faq"),
+    path('login/', aid_app_views.login, name="login"),
+    path('sign-up/', aid_app_views.sign_up, name="sign-up"),
     path('aid/', include('aidApp.urls')),
 ]

@@ -56,6 +56,12 @@
 
     <!-- <header class="topnav"> -->
 
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+
     <header>
         <div class="logo">
             <img src="{% static 'aidApp/images/FAQ-images/Group.svg' %}">
@@ -69,11 +75,11 @@
                 </button>
 
                 <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html" class="selected">About Us</a>
-                    <a href="FAQ.html">FAQ</a>
-                    <a href="login.html">Login</a>
-                    <a href="registration.html">Sign Up</a>
+                    <a href="{% url 'homepage' %}">Home</a>
+                    <a href="{% url 'about-us' %}" class="selected">About Us</a>
+                    <a href="{% url 'faq' %}">FAQ</a>
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'sign-up' %}">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -81,11 +87,12 @@
 
 
         <div class="no-dropdown">
-            <a href="index.html">Home</a>
-            <a href="about-us.html" class="selected">About Us</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="login.html">Login</a>
-            <a href="registration.html">Sign Up</a>
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about-us' %}" class="selected">About Us</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'sign-up' %}">Sign Up</a>
+
         </div>
 
         <!-- <div class="logo">
@@ -268,25 +275,26 @@
             </div>
 
         </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="Newsletter">
 
-        <div class="Newsletter">
+                <h2 class="Newsletter">Subscribe to our <span id="underline">
+                        <h2 id="news-letter">Newsletter!</h2>
+                    </span></h2>
 
-            <h2 class="Newsletter">Subscribe to our <span id="underline">
-                    <h2 id="news-letter">Newsletter!</h2>
-                </span></h2>
+                <div class="Newsletter" id="email-sign-up">
 
-            <div class="Newsletter" id="email-sign-up">
+                    <input class="user-input" type="text" placeholder="Enter Name" name="name" required><br>
 
-                <input class="user-input" type="text" placeholder="Enter Name" name="user-name"><br>
+                    <input class="user-input" type="text" placeholder="Enter Email" name="email" required><br>
 
-                <input class="user-input" type="text" placeholder="Enter Email" name="email"><br>
+                    <button id="sign-up-btn" name="newsletter">Sign Up</button>
 
-                <input id="sign-up-btn" type="button" value="Sign Up" placeholder="Sign Up">
+                </div>
 
             </div>
-
-        </div>
-
+        </form>
 
 
     </main>
@@ -355,13 +363,13 @@
 
         <div class="footer2">
 
-            <a href="about-us.html" id="footer-links">About Us</a><br>
+            <a href="% url 'about-us' %}" id="footer-links">About Us</a><br>
 
-            <a href="index.html" id="footer-links">Patient Portal</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">Patient Portal</a><br>
 
-            <a href="index.html" id="footer-links">News Room</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">News Room</a><br>
 
-            <a href="index.html" id="footer-links">Find A Provider</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">Find A Provider</a><br>
 
 
 
@@ -373,13 +381,13 @@
 
 
 
-            <a href="index.html" id="footer-links">Empr Medical Health Care</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">Empr Medical Health Care</a><br>
 
-            <a href="index.html" id="footer-links">Contact Us</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">Contact Us</a><br>
 
-            <a href="index.html" id="footer-links">Locations</a><br>
+            <a href="{% url 'homepage' %}" id="footer-links">Locations</a><br>
 
-            <a href="index.html" id="footer-links">Careers</a>
+            <a href="{% url 'homepage' %}" id="footer-links">Careers</a>
 
 
 
@@ -403,7 +411,7 @@
 
     </footer>
 
-    <script src="{% static 'aidApp/js/about-us.js' %}"></script>
+    <script src="{% static 'aidApp/js/about-us.js'%}"></script>
 
 </body>
 
