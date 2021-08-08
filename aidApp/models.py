@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User  # new
 
 
 class Doctors(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # new
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
@@ -17,6 +19,9 @@ class Clinics(models.Model):
     clinic_name = models.CharField(max_length=50)
     open_hours = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
@@ -27,6 +32,9 @@ class Pharmacies(models.Model):
     pharmacy_name = models.CharField(max_length=50)
     open_hours = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
@@ -34,7 +42,8 @@ class Pharmacies(models.Model):
 
 
 class Patients(models.Model):
-    patient_first_name = models.CharField(max_length=50)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # new
+    first_name = models.CharField(max_length=50)
     patient_last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
@@ -47,7 +56,7 @@ class Patients(models.Model):
     zip_code = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.last_name
+        return f"{self.first_name}  {self.patient_last_name}"
 
 # class Admin(models.Model):
 #     admin_full_name = models.CharField(max_length=50)
@@ -61,17 +70,15 @@ class Patients(models.Model):
 
 
 class Consultations(models.Model):
-    doctor_last_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
+    last_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
     patient_last_name = models.ForeignKey(Patients, on_delete=models.CASCADE)
     clinic = models.ForeignKey(Clinics, null=True, on_delete=models.SET_NULL)
     pharmacy = models.ForeignKey(
         Pharmacies, null=True, on_delete=models.SET_NULL)
-    month = models.CharField(max_length=10)
-    date = models.IntegerField
-    time = models.CharField(max_length=10)
+    consultation_date = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
-        return self.patient_last_name
+        return f"{self.patient_last_name}"
 
 
 class Feedback_Complaint(models.Model):
