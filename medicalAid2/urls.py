@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from aidApp import views as aid_app_views
+from register import views as v
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("register/", v.register, name="register"), 
     path('', aid_app_views.index, name = "homepage"),
-    path('aid/', include('aidApp.urls'))
+    path('aid/', include('aidApp.urls')),
+    
 ]
