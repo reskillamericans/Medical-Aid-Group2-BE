@@ -25,4 +25,3 @@ urlpatterns = [
     path('login/', aid_app_views.login, name="login"),
     path('sign-up/', aid_app_views.sign_up, name="sign-up"),
     path('aid/', include('aidApp.urls')),
-]
