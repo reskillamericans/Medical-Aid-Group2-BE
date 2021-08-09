@@ -8,7 +8,12 @@ from .models import Feedback_Complaint
 from .models import FAQ
 
 
+from .models import ContactUs, Newsletter
 # Register your models here.
+
+
+admin.site.register(ContactUs)
+admin.site.register(Newsletter)
 admin.site.register(Doctors)
 admin.site.register(Clinics)
 admin.site.register(Pharmacies)
