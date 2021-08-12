@@ -44,3 +44,15 @@ def faq(request):
     newsletter_form(request)
 
     return render(request, 'aidApp/faq.html', context)
+
+
+def feedback(request):
+    return render(request, 'aidApp/feedback.html')
+
+
+def feedbacksent(request):
+    return render(request, 'aidApp/feedback-complaints-sentpage.html')
+
+
+def feedbackform(request):
+    return render(request, 'aidApp/feedback-complaints-form.html')

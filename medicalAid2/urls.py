@@ -24,5 +24,8 @@ urlpatterns = [
     path('faq/', aid_app_views.faq, name="faq"),
     path('login/', aid_app_views.login, name="login"),
     path('sign-up/', aid_app_views.sign_up, name="sign-up"),
+    path('feedback/', aid_app_views.feedback, name ="feedback"),
+    path('feedbacksent/', aid_app_views.feedbacksent, name="feedbacksent"),
+    path('feedbackform/', aid_app_views.feedbackform, name="feedbackform"),
     path('aid/', include('aidApp.urls')),
 ]
