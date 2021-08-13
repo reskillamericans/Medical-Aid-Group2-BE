@@ -1,0 +1,200 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'aidApp/css/feedback-complaints-sentpage.css'%}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="feedback-complaints-sentpage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="icon" href="aidApp/images/admin-images/logo.svg">
+    <title>Sent Page</title>
+</head>
+<body>
+    <div class="body-Container">
+        <header id="top-container"> <!--Header-->
+                    <!--Hamburger Menu-->
+                        <nav class="navbar">
+                            <div class="hamburger-menu">
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+                            <ul class="nav-list">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/dashboard.svg' %}" alt=""> Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/users.svg' %}" alt=""> Users</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/requests.svg' %}" alt=""> Requests</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/pharmacies.svg' %}" alt=""> Pharmacies & Clinics</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/feedback.svg' %}" alt=""> Feedback & Complaints</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/settings.svg' %}" alt=""> Settings</a>
+                               </li>
+                               <li class="nav-item">
+                                    <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/supporfaq.svg' %}" alt=""> Support/FAQ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> <img src="{% static 'aidApp/images/admin-images/logout.svg' %}" alt=""> Logout</a>
+                                </li>
+       
+                            </ul>
+       
+                        </nav>
+                    <!--Hamburger Menu-->
+               
+            <div class="a-logo"  >
+                <span>
+                    <img src="{% static 'aidApp/images/admin-images/logo.svg' %}" alt="" class="a-logo">
+                </span>
+    
+                <div class="displayNone-mobile">
+                    <a  href="#" id="nav-logo2">Empr Medical</a>
+                </div>
+            </div>
+            <div class="search-box-container">
+                <form>
+                    <input  type="search" name="search-box" id="search-box" autocomplete="off" >
+                    
+                </form>
+                
+            </div>  
+            <div class="top-icons">
+                <div class="top-icons">
+                    <a href="#"class="nav-btns"><img src="{% static 'aidApp/images/admin-images/feedback.svg' %}" alt="feedback-icon"></a>
+                     <a href="#" class="nav-btns"><img src="{% static 'aidApp/images/admin-images/notification-bel.svg' %}" alt="notification-icon"></a>
+                 </div>
+            </div>
+    </header><!--Header End -->
+    <aside class="left-container"><!--Sidebar-->
+        <div class="sidebar-top" id="top-content">
+            <ul class="top-menu-container">
+                <li>
+                    <div>
+                        <a href="/admin/admin.html" class="sidebar-link">
+                           <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/dashboard.svg' %}" alt="dashboard"><span class="menu-selectionNames" >Dashboard</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                   <div>
+                       <a href="/admin/users.html" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/users.svg' %}" alt="Users icon"><span class="menu-selectionNames" >Users</span>
+                       </a>
+                   </div>
+                </li>
+                <li>
+                   <div>
+                       <a href="/admin/requests-page.html" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/requests.svg' %}" alt="Requests icon"><span class="menu-selectionNames" >Requests</span>
+                       </a>
+                   </div>
+                </li>
+                <li>
+                   <div>
+                       <a href="/admin/clinics-pharmacies.css" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/pharmacies.svg' %}" alt="Pharmacies and Clinics icon"><span class="menu-selectionNames" >Pharmacies & Clinics</span>
+                       </a>
+                   </div>
+                </li>
+                <li>
+                   <div>
+                       <a href="/admin/feedback-complaints-pg1.html" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/feedback.svg' %}" alt="feedback & complaints icon"><span class="menu-selectionNames" >Feedback & Complaints</span>
+                       </a>
+                   </div>
+                </li>
+                <li>
+                   <div>
+                       <a href="#" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/settings.svg' %}" alt="Settings icon"><span class="menu-selectionNames" >Settings</span>
+                       </a>
+                   </div>
+                </li>
+                <li> 
+                   <div>
+                      <a href="/Faq.html" class="sidebar-link">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/supporfaq.svg' %}" alt="Support/FAQ"><span class="menu-selectionNames">Support/FAQ</span> 
+                       </a>
+                   </div>
+               </li>
+               <li>
+                   <div>
+                      <a href="/login.html" class="sidebar-link" id="logout-container">
+                          <img class="icon-leftcontainer" src="{% static 'aidApp/images/admin-images/logout.svg' %}" alt="Log out icon"><span class="menu-selectionNames" >Logout</span>
+                      </a>
+                   </div>
+              </li>  
+             </ul><!--Top Menu Container-->  
+    
+        </div>
+    </aside><!--end of sidebar-->
+    <main class="middle-container"><!--Main-->   
+    <h2 id="feedback-title">Feedback and Complaints</h2><!--clinics-title-->
+    <div class="displayNone-dsktp" >
+        <img src="{% static 'aidApp/images/admin-images/sent-complaints.svg' %}" alt="">
+    </div>
+    <div id="message-content">
+        <p>Message Successful! <br>
+         <span>Feedback response sent</span></p>
+    </div>
+  
+    <div class="last-section" >
+        <a href="/admin/feedback-complaints-pg2.html"><img src="{% static 'aidApp/images/admin-images/left-line-arrow.svg' %}" alt="back arrow">Back</a>
+       
+        <button id="blue" ><a href="/admin/feedback-complaints-pg1.html">Return</a></button>
+    </div>
+         
+           
+    </main><!--Main end-->
+    <aside class="right-container"> <!--right-container-->
+        <div class="right-container">
+            <div class="my-profile-container" id="profile">
+                <img src="{% static 'aidApp/images/admin-images/profile-pic.jpg' %}" alt="Profile-picture" height="100px" width="100px" class="profile-pic">
+                <h2>Trista Young</h2>
+                   <span>My Profile</span>        
+            </div>
+            <div class="appointments-container">
+                <div class="apps-content" id="apps" >
+                    <h3 class="right-container-headers">Today's Appointments <br> 
+                        <span id="all-locations">All Locations</span></h3>
+                </div>
+                <div class="apps-content">
+                    <span>40</span>
+                </div>
+               
+            </div>
+            <div class="cancelled-app-container">
+                <h3 class="right-container-headers">Cancelled Appointments</h3>
+                <h2>4/40</h2>
+            </div>
+            <div class="numVisits-container">
+                <h3 class="right-container-headers">Todays Visits:June 2021</h3>
+                <h2>520</h2>
+            </div>
+            <div class="notifications-contianer">
+                <h3 class="right-container-headers">Notifications</h3>
+                <ul class="bullet-list-style">
+                    <li class="bullet-list-style">System Update-6/28/2021</li>
+                    <li class="bullet-list-style">Update Contact Information</li>
+                </ul>
+            </div>
+    
+        </div>
+    </aside><!--Right Container End-->
+    </div> <!--Body Container End-->
+    
+    <script src="/admin/users.js"></script>
+    
+</body>
+</html>
