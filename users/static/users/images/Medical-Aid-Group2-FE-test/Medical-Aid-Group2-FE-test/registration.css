@@ -1,0 +1,174 @@
+.header {
+    padding-left: 1em;
+}
+.img, .a {
+    display: inline;
+    vertical-align: middle;
+}
+.text-only {
+    display: inline-block;
+    vertical-align: middle;
+}
+#a .nav-logo, .logo-text {  
+    color: black;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+/* heading */
+
+.flex-container {
+    display: flex;
+}
+.img, .doc-img {
+    margin-top: 88px;
+    max-width: 70%;
+    margin-left: 110px;
+    width: 100%;
+}
+.signup-heading  {
+    margin-left: 3em;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+}
+*:focus {
+    outline: none;
+}
+input:focus{
+    background-color: rgb(178, 240, 226); 
+}
+.name-container {
+    display: flex;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.fname {
+    background-color:rgb(245, 241, 241);
+    border: 1px solid;
+    border-color: rgb(223, 222, 222);
+    border-radius: 7px;
+    font-size: 15px;
+}
+.fname {
+    padding-left: 6px; 
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 20px;
+    margin-right: -10px;
+    margin-bottom: 20px;
+}
+.lname {
+    background-color:rgb(245, 241, 241);
+    border: 1px solid;
+    border-color: rgb(223, 222, 222);
+    border-radius: 7px;
+    font-size: 15px;
+}
+.lname {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px; 
+    padding-right: 20px;
+    margin-left: 58px;
+    margin-bottom: 20px;
+}
+
+.phone, .email2, .cpwd {
+    background-color:rgb(245, 241, 241);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 280px;
+    padding-left: 5px; 
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-color: rgb(223, 222, 222);
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 15px;
+}
+.pass, .check-box{
+    font-size: 20px;
+}
+.fname:hover, .lname:hover, .phone:hover, .email2:hover, .cpwd:hover {
+    background-color:rgb(178, 240, 226); ;
+  }
+  .signup-btn:hover {
+    background-color: rgb(178, 240, 226); ;
+  }
+ .signup-btn  {
+    background-color: rgb(42, 199, 183);
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border: transparent;
+    margin-left: 105px;
+    font-size: 14px;
+    border-radius: 5%;
+    font-weight: bold;
+    font-size: 17px;
+}
+@media only screen and (max-width: 1024px) {
+    .img, .doc-img {
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: -12px;
+        margin-bottom: -15px;
+        max-width: 38%;
+        width: 100%;
+    } 
+    .signup-heading  {
+        margin-left: 6.5em;
+        font-size: 20px;
+    } 
+    .flex-container {
+       flex-direction: column;
+       align-items: flex-start;
+       padding-bottom: 0px;
+    }
+    .container {
+        padding-top: 0px;
+        padding-left: 15px;
+        /* margin-left:auto;
+        margin-right: auto; */
+     }
+     .name-container {
+         display: block;
+         flex-direction: row;
+     }
+     .fname {
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 122px;
+     }
+    .lname {
+         margin-left: 0px;
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 122px;
+     }
+     
+     .phone, .email2, .cpwd {
+         padding-right: 141px;
+         margin-left: 18px;
+         margin-bottom: 10px;
+        
+     }
+     .pass {
+        font-size: 12px;
+        margin-left: 18px;
+    }
+    .check-box{
+        font-size: 15px;
+        margin-left: 13px;
+        margin-bottom: -10px;
+    }
+    .signup-btn  {
+       margin-bottom: 14px;
+       margin-left: 85px;
+       padding-bottom: 8px;
+       padding-top: 8px;
+    }
+ }

@@ -1,0 +1,769 @@
+:root{
+    --background-color: #FFFFFF;
+    --secondarybg-color:rgba(168, 168, 168, 0.2);
+    --primary-text-color: #333333;
+    --secondary-text-color: #8A8A8A;
+    --buttonnav-color: #00C5B4;
+    --secodary-color: #78F0E6;
+    --trasnparent-background:rgba(0, 197, 180, 0.64);
+    --div-bg-color:rgba(120, 240, 230, 0.4);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+html{
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--background-color);
+    color: var(--primary-text-color);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0px;
+    overflow-x: hidden; /*gets rid of horizontal scroll*/
+    overflow-y:scroll;
+    margin: 0px;
+    padding: 0px;
+    
+   }
+   nav{
+       width: 100%;
+   }
+   span#nav-logo{
+       overflow: hidden;
+       width: 0px;
+   }
+   a{
+       text-decoration: none;
+       color: var(--primary-text-color);
+   }
+   a.nav-select:hover{
+      background-color: var(--buttonnav-color);
+      border-radius: 5px;
+      width: 66px;
+      height: 30px;
+      padding: 15px;
+      text-align: center;
+      color: var(--background-color);
+      transition: background 1s linear 0.1s , color 0.5s linear 0s; 
+   }
+   ul#menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-content: center;
+      align-items: center;
+      padding: 0px;
+      flex-basis: 15%;
+   }
+   li#left-nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 2;
+   }
+   div.header-container{
+      background-image: url(/imges/about.svg);
+      background-size: 100% 100%;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
+      grid-template-rows:  1fr ;
+   }
+   
+       
+   
+   div.about-content{
+      background-color: var(--trasnparent-background);
+      width: 75%;
+      height: 355px;
+      color: var(--background-color);
+      border-radius: 15px;
+      padding: 10px;
+      width: 400px;
+      height: 280px;
+      grid-row-start:1 ;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 5;
+      font-weight: normal;
+   }
+   img#bg-image{
+      width: 98%;
+      height: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  div.mission-statement{
+     color: var(--primary-text-color);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 15px 20px;
+     
+  }
+   p.mission-statement{
+       text-align: center;
+   }
+  div.sv{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: center;
+     align-items: center;
+     padding: 15px 20px;
+     background-color: var(--div-bg-color);
+     
+  }
+  div.service-img{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+  }
+  img.service-img{
+     width: 45%;
+     height: 45%;
+  }
+  div.services-link{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     text-align: center;
+     align-items:center;
+  }
+
+  ul.services-link{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: space-between;
+      width: 80%;
+  }
+ li#primary{
+     position: relative;
+     right: 40%;
+ }
+li#dentistry{
+    position: relative;
+    right: 20%;
+}
+li#pediactrics{
+    position: relative;
+    left:10%;
+}
+div#values{
+    background-color: var(--secondarybg-color);
+}
+
+div#values-and-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+img#value-logo{
+    width: 50%;
+    height: 50%;
+    margin: 0px 30% ;
+    margin-top: 15px;
+}
+ul.list-values{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+li.list-values{
+    text-align: center;
+    margin: 10% 0px;
+    
+
+}
+
+div.our-founder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+h2#h2founder{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+img#founder-img{
+    width: 50%;
+    height: 50%;
+}
+p.our-founder{
+    text-align: center;
+    padding: 8px 15px;
+}
+
+div.our-founder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.our-team-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secondarybg-color);
+}
+div.our-team{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2.our-team{
+    padding-bottom: 20px;
+}
+img#our-team-img{
+    width: 50%;
+    height: 50%;
+}
+p.our-team{
+    text-align: center;
+    padding: 10px 15px;
+}
+
+h2.Newsletter{
+    text-decoration: none;
+    text-align: center;
+}
+
+div.Newsletter{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+div#email-sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 10px;
+}
+
+
+input.user-input{
+    height: 1.75em;
+    width: 10em;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+    font-family: 'Red Hat Display', sans-serif;
+    padding:8px 0 8px 8px
+
+    
+}
+input#sign-up-btn{
+    height: 2em;
+    width: 8em;
+    border-radius: 5px;
+    background-color: var(--buttonnav-color);
+    font-weight: bold;
+    box-sizing: border-box;
+}
+input{
+    border-style: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+div.location-disclaimer{
+    background-color: var(--secodary-color);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul.address-disclaimer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+img#logo-disclaimer{
+    height: 75px;
+    width: 75px;
+}
+ul.map-copyright{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 20%;
+    font-size: 16px;
+    font-weight: normal;
+}
+h2#news-letter{
+    font-size: 28px;
+   text-decoration: underline var(--buttonnav-color) 6px;
+   
+}
+ul#footer-menu1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0px;
+    line-height: 1.5;
+}
+ul#footer-menu2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:598px) {
+    body{
+        overflow-x: hidden;
+    }
+    ul#menu{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+/*Nav-bar hamburger menu*/
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/*end of nav css*/
+
+    img#bg-image{
+        width: 85%;
+    }
+   
+    div.about-content{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        width: 98%;
+        font-size: 14px;
+        height: fit-content;
+        
+    }
+}
+
+@media screen and (max-width:450px){
+    
+    p#collapse{
+        font-size: 18px;
+    }
+
+    div.mission-statement{
+        margin-top: 50px;
+    }
+    ul.services-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    img.service-img{
+        margin: 0 30% ;
+    }
+    div#img-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    a.services-link{
+        padding: 10px;
+        text-align: center;
+        
+    }
+   
+    li.services-flex{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:599px) and (max-width:1800px) {
+    input#nav-checkbox{
+        position: absolute;
+        left: -100px;
+    }
+    span#nav-logo{
+        overflow: visible;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    img#nav-img{
+        width: 30px;
+        height: 30px;
+    }
+    div#menuToggle{
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+    }
+    ul#menu{
+        align-items: center;
+        height: 50%;
+        margin: 0px;
+    }
+    div.header-container{
+        background-size: 80% 500px;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns:20px 1fr 1fr 1fr 1fr 1fr 20px ;
+        grid-template-rows: 40px 2fr 1fr 1fr 10px ;
+    }
+    div.about-content{
+        width: 400px;
+        height: 280px;
+        grid-row-start:2 ;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+    h1.about-content{
+        font-size: 28px;
+    }
+    p.about-content{
+        font-size: 16px;
+        font-weight: normal;
+    }
+    div.mission-statement{
+        height: 300px;
+        padding-top: 0px;
+    }
+    p.mission-statement{
+        line-height: 2;
+        text-align: left;
+    }
+
+    ul.services-container{
+        display: flex;
+        flex-direction: row;
+        font-size: 21px;
+    }
+    img.service-img{
+        width: 90% ;
+        height: 90%;
+    }
+    div#values-and-images{
+        flex-direction: row-reverse;
+
+    }
+    img#value-logo{
+        width: 200px;
+        height: 200px;
+    }
+    ul.list-values{
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        line-height: 1;
+        width: 400px;
+    }
+    li.list-values{
+        width: 370px;
+    }
+    div.our-founder{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center
+    }
+    img#founder-img{
+        height: 400px;
+        width: 400px;
+    }
+    p.our-founder{
+        text-align: left;
+        font-weight: normal;
+    }
+    div.our-founder{
+        margin: 5% 10px 8% 10px;
+    }
+    div.our-team{
+        flex-direction: row;
+        padding: 15px;
+        padding-bottom: 10%;
+    }
+    p.our-team{
+        font-size: 21px;
+        font-weight: normal;
+        text-align: left;
+        padding: 15px 15% 10px 15%;
+        line-height: 2;
+    }
+    img#our-team-img{
+        width: 50%;
+        height: 50%;
+    }
+    h2.Newsletter{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    input.user-input{
+        width: 15em;
+    }
+    div.location-disclaimer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    ul.address-disclaimer{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    li#address{
+        flex-direction:column;
+        align-items: flex-start;
+        padding-right: 43%;
+        text-align: left;
+    }
+    
+    span#max-width{
+        width: 100%;
+        text-align: left;
+    }
+    ul.map-copyright{
+        flex-direction: column;
+    }
+    li.map-copyright{
+        text-align: left;
+    }
+    span#disclaimer{
+        margin-left: 15px;
+    }
+
+    ul#footer-menu1{
+        justify-content: space-evenly;
+        align-items: flex-start;
+        line-height: 2;
+
+    }
+    ul#footer-menu2{
+        justify-content: space-evenly;
+        align-items: flex-start;
+        line-height: 2;
+    }
+    ul#notice-of-privacy{
+        padding-bottom: 9%;
+    }
+
+
+}
+
+
+
+
+   
+
+    
+
+
+
+   
+
+h2{
+   font-size: 28px;
+   text-decoration: underline var(--buttonnav-color) 6px;
+  
+   
+
+}
+
+p{
+    line-height: 1.5;
+    font-size: 21px;
+
+}
+ 
+ul{
+   list-style-type: none;
+}
+ 

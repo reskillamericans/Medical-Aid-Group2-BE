@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --seagreen: #00C5B4B2;
+}
+body {
+    margin: 0;
+    padding: 0;
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 22px;
+    color: #333333;
+}
+header {
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 10px;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 35px;
+}
+.logo h2 {
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 8px;
+}
+.search-box {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.search-box input[type=search] {
+    /* display: inline-block; */
+    align-content: center;
+    padding: 1em 14em;
+    background-color: #e4e1e1;
+    border: none;
+    border-radius: 7px;
+}
+.fa-search {
+    position: absolute;
+    /* left: 34px; */
+    padding-top: 10px;
+    right: 5%;
+}
+.header-icons {
+    margin-right:250px;
+}
+.dashboard-container {
+    display: flex;
+    margin-left: -15px;
+    width: 100%;
+}
+.dashboard {
+    background: var(--seagreen);
+    border-radius: 5px;
+    height: 1300px;
+    padding-right: 80px;
+
+}
+.dash-icon img, 
+.dash-support img, 
+.dash-logout img {
+    margin-right: 15px;
+    margin-left: 30px;
+}
+.dash-icon {
+    display: flex;
+    flex-direction: row;
+}
+.dash-support {
+    display: flex;
+    flex-direction: row;
+    margin-top: 300px;
+}
+.dash-logout {
+    display: flex;
+    flex-direction: row;
+    margin-top: 418px;
+}
+.dash-icon h3, 
+.dash-support h3, 
+.dash-logout h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 100%;
+}
+.welcome-container {
+    background: linear-gradient(264.31deg, rgba(0, 197, 180, 0.4) 11.94%, rgba(255, 255, 255, 0.4) 34.66%);
+    /* width: 100%; */
+}
+.welcome-container h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 49px;
+}
+.welcome-container p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+}
+.analytics {
+    width: 100%;
+    padding-bottom: 60px;
+}
+.analytics-heading h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 37px;
+}
+.cards {
+    display: flex;
+     }
+.section1, .section2 {
+    width: 181px;
+    margin-right: 50px;
+    padding: 0px 50px 40px 50px;
+    border-radius: 15px;
+    box-sizing: content-box;
+    border: 1px solid gray;
+    } 
+    .section1 h2, .section2 h2, .section3 h3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+.section3 {
+    /* width: 400px; */
+    /* padding: 0px 0px 40px 50px; */
+    background: #00C5B438;
+    box-sizing: content;
+    border-radius: 15px;
+    width: 500px;
+} 
+.card-content1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -35px;
+}
+.card-content1 h3 {
+    color: #000000;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+}
+.card-content2 {
+    display: flex;
+}
+.card-content2 h1 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 20px;
+   
+    margin-top: 35px;
+    margin-left: 30px;
+}
+.stars {
+   margin-left: 70px;
+   margin-top: -10px;
+}
+.rating {
+    font-weight: bold !important;
+    font-size: 50px !important;
+    /* text-align: center; */
+    margin-left: -105px;
+    margin-top: -30px;
+}
+.fa-star {
+    color: yellow;
+}
+.card h2 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 37px;
+    text-align: center;
+}
+.section1 p, .section2 p{
+    /* text-align: left; */
+    font-size: 16px;
+    line-height: 21px;
+
+}
+.card h4 {
+    padding-left: 43px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+
+.appointments {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    font-size: 16px;
+    width: 100%;
+}
+.appointments h1 {
+    text-align: center;
+    font-weight: 500;
+}
+.section4, .section5, .section6 {
+    width: 181px;
+    margin-right: 50px;
+    margin-left: 40px;
+    padding: 0px 50px 40px 50px;
+    border-radius: 15px;
+    box-sizing: content-box;
+    border: 2px solid gray;
+    } 
+.section4 {
+    border: 1px solid #96D9FF;
+    background: #96D9FF33;
+}
+.section4 h2, .section5 h2, .section6 h2 {
+    text-align: center;
+}
+.section5 {
+    background: #78F0E633;
+    border: 1px solid #78F0E6CC
+}
+.section6 {
+    background: #FFB26B66;
+    border: 1px solid #FFB26B
+}
+.patient-info {
+    display: flex;
+    align-items: baseline;
+}
+.patient-date {
+    display: flex;
+    align-items: baseline;
+}
+.visit-type {
+    display: flex;
+    align-items: baseline;
+  
+}
+.signup-btn:hover {
+    background-color: rgb(178, 240, 226); ;
+  }
+ .signup-btn  {
+    background: var(--seagreen);
+    margin-top: 30px;
+    padding: 12px;
+    border: transparent;
+    margin-left: 105px;
+    font-size: 16px;
+    border-radius: 8%;
+    font-weight: bold;
+    margin-left: 950px;
+}
+.farright {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    align-items: center;
+    width: 100%;
+}
+.section7 img {
+    width: 80%;
+}
+.section7 h4 {
+    align-content: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+.section7 p {
+    margin-left: 40px;
+}
+.section8, .section9, .section10 {
+    box-sizing: border-box;
+    width: 105%;
+    height: 180px;
+}
+.section8 {
+    background: linear-gradient(237.4deg, #FFB26B 4.37%, rgba(255, 178, 107, 0) 44.89%);
+    margin-bottom: 10px; 
+}
+.section9 {
+    background: linear-gradient(248.76deg, rgba(150, 217, 255, 0.8) 4.81%, rgba(255, 255, 255, 0) 64%);
+    margin-bottom: 10px;
+}
+.section10 {
+    background: linear-gradient(246.4deg, #00C584 -14.02%, rgba(0, 197, 132, 0) 48.09%);
+    margin-bottom: 10px;
+}
+.section8 p, .section9 p {
+    align-items: center;
+}
+.section10 p {
+    margin-left: 30px;
+}
+.section8 b, .section9 b, .section10 b {
+    margin-left: 60px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    width: 100px;
+    height: 50px;
+}
+.section11 {
+    border: 1px solid gray;
+    width: 100%;
+    height: 220px;
+}
+.section11 h3 {
+    margin-left: 20px;
+}
+li {
+    font-size: 16px;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+/* beginning of responsiveness */
+@media screen and (max-width:780px) {
+  html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+header {  
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 5px;
+  }
+  .search-box input[type=search] {
+    padding: 1em 8em;
+}
+.header-icons {
+    position: absolute;
+    margin-left: 300px;
+    display: inherit;
+}
+.dashboard-container {
+    flex-direction: column;
+}
+.dashboard {
+    height: 500px;
+    width: 100%;
+}
+.dash-support, .dash-logout {
+    margin-top: 0px;
+}
+.welcome-container {
+    width: 93%;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.main-content {
+    align-items: flex-start;
+}
+.cards {
+    flex-direction: column;
+    margin-left: -10px;
+}
+.section1, .section2 {
+    margin-bottom: 20px;
+    width: 210px;
+}
+.section3 {
+    width: 96%;
+    margin-left: -23px;
+}
+.appointments {
+    padding: 0px;
+    padding-bottom: 20px;
+    width: 94%;
+    margin-left: -25px;
+}
+.section4, .section5, .section6 {
+    margin-bottom: 20px;
+}
+
+.card-content2 h1 {
+    margin-left: 9px;
+}
+.stars {
+    margin-left: 25px;
+}
+
+
+.section7 img {
+    width: 100%;
+    margin-top: 10%;
+    
+    margin-left: -49px;
+}
+.section7 h4 {
+    margin-left: -80px;
+}
+.section7 p {
+    margin-left: -37px;
+}
+.section8, .section9, .section10 {
+    width: 70%;
+}
+.section11 {
+    width: 94%;
+    margin-left: -88px;
+    height: 180px;
+}
+.signup-btn {
+    margin-left: 105px;
+
+  
+}
+}

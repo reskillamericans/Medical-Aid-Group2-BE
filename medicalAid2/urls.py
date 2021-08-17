@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from aidApp import views as aid_app_views
+from users import views as v
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +31,8 @@ urlpatterns = [
     path('feedbacksent/', aid_app_views.feedbacksent, name="feedbacksent"),
     path('feedbackform/', aid_app_views.feedbackform, name="feedbackform"),
     path('aid/', include('aidApp.urls')),
+    path('users/', include('users.urls')),
+    path('submit-form/', v.submit_register_form, name="register_user"),
+    path('submit-login/', v.login_submit, name="login_user"),
+    path('login/', v.render_login_page, name="user_login"),
 ]

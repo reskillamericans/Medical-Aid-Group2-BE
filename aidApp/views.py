@@ -27,11 +27,11 @@ def about_us(request):
 
 
 def login(request):
-    return HttpResponse('<h1>Login Page</h1>')
+    return render(request, 'users/login.html')
 
 
 def sign_up(request):
-    return HttpResponse('<h1>Sign Up Page</h1>')
+    return render(request, 'users/register.html')
 
 
 def faq(request):

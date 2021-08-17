@@ -1,0 +1,156 @@
+.header {
+    padding-left: 1em;
+}
+.img, .a-logo  {
+    display: inline;
+    vertical-align: middle;
+}
+.text-only {
+    display: inline-block;
+    vertical-align: middle;
+}
+#a .nav-logo2, .logo2-text {  
+    color: black;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+/* heading */
+.flex-container {
+    display: flex;
+}
+.img, .doc2-img {
+    margin-top: 71px;
+    margin-left: 100px; 
+    max-width: 70%;
+    width: 100%;
+}
+.login-heading  {
+    margin-left: 3em;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+}
+*:focus {
+    outline: none;
+}
+input:focus{
+    background-color: rgb(178, 240, 226); 
+}
+
+.email1 {
+    background-color:   rgb(245, 241, 241);
+    padding-bottom: 15px;
+    padding-right: 175px;
+    padding-left: 5px; 
+    margin-bottom: 42px;
+    margin-top: 4px;
+    border: 1px solid;                                      
+    border-color: rgb(223, 222, 222);
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 17px;
+}
+input:focus{
+    background-color:rgb(178, 240, 226);;
+    
+}
+.email1:hover, .pwd:hover {
+    background-color:rgb(178, 240, 226);
+    
+  }
+
+.pwd {
+    background-color:   rgb(245, 241, 241); 
+    padding-bottom: 15px;
+    padding-right: 175px;
+    padding-left: 5px; 
+    margin-bottom: 0px;
+    border: 1px solid;
+    border-color: rgb(223, 222, 222);
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 17px;
+}
+.psw {
+    margin-left: 86px;
+}
+
+  .signup-btn:hover {
+    background-color:rgb(178, 240, 226);
+  }
+
+.login-btn {
+    background-color: rgb(42, 199, 183);
+    padding-right: 58px;
+    padding-left: 58px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: none;
+    margin-left: 79px;
+    margin-bottom: 50px;
+    margin-top: 58px;
+    font-size: 14px;
+    border-radius: 5%;
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+.login-btn:hover {
+    background-color:rgb(178, 240, 226);
+    
+  }
+.register {
+    padding-left: 58px;
+}
+
+@media only screen and (max-width: 1024px) {
+     .img, .doc2-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 54%;
+        margin-top: 0px;
+        /* margin-left: 94px; */
+    }
+
+    .flex-container {
+       flex-direction: column;
+       align-items: center;
+       padding: 0px;
+       margin-left: -25px;
+    }
+    .login-heading {
+        margin-left: 6em;
+        font-size: 20px;
+    }
+    .email1, .pwd {
+        margin-left: 11px;
+        padding-right: 105px;
+    }
+.container {
+    flex-direction: column;
+    padding-left: 18px;
+    margin: 20px;
+    } 
+.move-bx{
+    margin-left: 10px;
+    margin-bottom: 20px;
+   
+}
+.psw {
+    padding: 0px;
+    margin-left: 10px;
+}
+.login-btn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.register {
+    padding-left: 35px;
+    margin-bottom: -10px;
+    margin-top: 0px;
+} 
+
+ }
