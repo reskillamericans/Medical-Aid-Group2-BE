@@ -30,7 +30,10 @@ def submit_register_form(request):
             user.last_name = last_name
             user.save()
             user = authenticate(username = username, password = password)
-            return render(request, 'users/login.html')
+            if user is not None:
+                login(request,user)
+                return render(request, 'users/homepage.html')
+            
     else:
         return render(request, 'users/register.html')
 
@@ -44,7 +47,7 @@ def login_submit(request):
     user = authenticate(username=username, password=password)
     if user is not None:
         login(request,user)
-        return render(request, 'aidApp/faq.html')
+        return render(request, 'users/homepage.html')
 
 def logout_view(request):
     logout(request)
