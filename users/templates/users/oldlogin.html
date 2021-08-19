@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+    </style>
+    <link href="https://fonts.google.com/specimen/Lexend+Deca" rel="stylesheet">
+    <link rel="stylesheet" href={% static 'users/css/Login.css' %}>
+    <link rel="icon" href= {% static 'users\images\login-images\Group.svg' %} type="image/svg+xml">
+    <title>Login Page </title>
+</head>
+<body>
+
+    <div class="header">
+        <span id="logo2">
+            <img class="a-logo" src={% static 'users\images\login-images\Group.svg' %}>
+        </span>
+
+        <div class="text-only">
+            <a class="logo2-text" href="#" id="nav-logo2">Empr Medical</a>
+        </div>
+
+    </div>
+
+
+    <div class="flex-container">
+        <div class="image">
+            <img class="doc2-img" src={% static 'users\images\login-images\Doctor4.svg' %}>  
+        </div>
+
+        <div class="container">
+            <div class="login-heading">
+                <p>Login</p>
+            </div>
+            
+            <form method ="post" action= {% url 'users:login_user' %}>
+            {% csrf_token %}
+        
+                    <input type="username" class="email1" name="username" placeholder="Enter Username" required><br>
+                    <input type="password" class="pwd" name="pwd" placeholder="Enter Password" required><br><br>
+
+                    <div  class="move-bx">
+                        <input type="checkbox" class="chkbx" name="chkbx">
+                        <label for="chkbx" style="font-size: 17px">Remember me</label>
+                        <span class="psw"><a href="#" style="font-size: 17px; color: rgb(42, 199, 183);">Forget password?</a></span>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="login-btn">Login</button><br><br><br>
+                       </div>      
+                   <div class="register">
+                       <label for="cracct">Not register yet?</label>
+                   
+                       <span class="cracct"><a href="register.html" style="color: rgb(42, 199, 183);">Create An account?</a></span>
+                   </div>
+                </div>
+
+               
+            </form>
+
+
+        </div>
+</div>
+   
+    <!-- fix -->
+</body>
+</html>
+{% endblock %}

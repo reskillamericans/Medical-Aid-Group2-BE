@@ -18,7 +18,7 @@ from django.urls import path, include
 from aidApp import views as aid_app_views
 from users import views as v
 
-
+app_name= 'aidApp'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +32,5 @@ urlpatterns = [
     path('submit-form/', v.submit_register_form, name="register_user"),
     path('submit-login/', v.login_submit, name="login_user"),
     path('login/', v.render_login_page, name="user_login"),
+    path('', include(('aidApp.urls', 'aidApp'), namespace='aidApp'))
 ]
