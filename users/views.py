@@ -5,9 +5,29 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.views.decorators.csrf import requires_csrf_token, csrf_protect
+from aidApp.models import FAQ
+from aidApp.helper import multiple_forms, newsletter_form
 
 
 # Create your views here.
+
+def index(request):
+    return render(request, 'aidApp/index.html')
+
+def about_us(request):
+    return render(request, 'aidApp/about-us.html')
+
+def faq(request):
+
+    faqs = FAQ.objects.all()
+    context = {
+        "faqs": faqs
+    }
+
+    newsletter_form(request)
+
+    return render(request, 'aidApp/faq.html', context)
+
 @csrf_protect
 def register(request):
     return render(request, 'users/register.html')
@@ -30,7 +50,11 @@ def submit_register_form(request):
             user.last_name = last_name
             user.save()
             user = authenticate(username = username, password = password)
-            return render(request, 'users/login.html')
+            if user is not None:
+                login(request,user)
+                messages.info(request, {'welcome': request.user.first_name})
+                return render(request, 'aidApp/index.html')
+            
     else:
         return render(request, 'users/register.html')
 
@@ -44,7 +68,11 @@ def login_submit(request):
     user = authenticate(username=username, password=password)
     if user is not None:
         login(request,user)
-        return render(request, 'aidApp/faq.html')
+        messages.info(request, {'welcome': request.user.username})
+        return render(request, 'aidApp/index.html')
+        
+    else:
+        return render(request, 'users/login.html')
 
 def logout_view(request):
     logout(request)

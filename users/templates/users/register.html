@@ -13,47 +13,92 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
     </style>
-    <link rel="stylesheet" href= {% static 'users/css/Registration.css' %}>
-    <link rel="icon" href= {% static 'users\images\registration-image\Group.svg' %} type="image/svg">
-    <title> 
-        Registration Page </title>
+    <link rel="stylesheet" href= {% static 'users/css/registration.css' %}>
+    <link href="https://fonts.google.com/specimen/Lexend+Deca" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+          crossorigin="anonymous"/>
+    <link rel="icon" href= {% static 'users\images\registration-image\Group.svg' %} type="image/svg+xml">
+    <title>Patient Registration Page</title>
+
 </head>
 <body>
 
-   <div class="header">
+   <!-- <div class="header">
         <span id="logo">
-            <img class="a" src={% static 'users\images\registration-image\Group.svg' %}>
+            <img class="a" src="./images/registration-image/Group.svg">
         </span>
-
         <div class="text-only">
             <a class="logo-text" href="#" id="nav-logo">Empr Medical</a>
         </div>
-
     </div>         
-
     <div class="flex-container">
         <div class="image">
-            <img class="doc-img" src={%static "users\images\registration-image\Doctor4.svg" %}>
-        </div>
-        
+            <img class="doc-img" src="./images/registration-image/Doctor 4.svg">
+        </div> -->
+        <header>
        
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </button>
+                
+                  <div class="dropdown-content">
+                        <a href= {% url 'users:index' %}>Home</a>
+                        <a href= {% url 'users:about-us' %}>About Us</a>
+                        <a href= {% url 'users:faq' %}>FAQ</a>
+                        <a href= {% url 'users:user_login' %}>Login</a>
+                        <a href= {% url 'users:register' %}>Sign Up</a>
+                    
+                  </div>
+                </div>
+            </div>
+            
+            
+            <a class=logo href="index.html">
+                <img src= {% static "users/images/FAQ-images/Group.svg" %}>&nbsp;
+                <h2>Empr Medical</h2>
+            </a>
+    
+                <div class="no-dropdown">
+                        <a href= {% url 'users:index' %}>Home</a>
+                        <a href= {% url 'users:about-us' %}>About Us</a>
+                        <a href= {% url 'users:faq' %}>FAQ</a>
+                        <a href= {% url 'users:user_login' %}>Login</a>
+                        <a href= {% url 'users:register' %}>Sign Up</a>
+                </div>
+                       
+            </header>
+                    <!-- PATIENT/DOCTOR PAGE TAB -->
+                    <div class="tab-switch">
+                        <div class="tab-wrapper">
+                        <ul>
+                            <li class="patient-tab"><a class="patient-link" href= {% url 'users:register' %}>Patient</a></li>
+                            <li class="doc-tab"><a class="doc-link" href="doctorregistration.html">Doctor</a></li>
+                        </ul>
+                        </div>
+                    </div>
+             <div class="flex-container">
+                        <div class="image">
+                            <img class="doc-img" src= {% static "users/images/registration-image/Doctor4.svg" %}>
+            </div>
+                    
             <div class="container">
                 <div class="signup-heading">
                     <p>Sign Up</p>
                 </div>
         
-                
-                <form method="post" action= {% url 'users:register_user' %}> 
+                <form method="post" action= {% url 'users:register_user' %}>
                 {% csrf_token %}
-                
+
 
                     <div class="name-container">
                         <input type="text" class="fname" name="fname" placeholder="First Name" required><br>
                         <input type="text" class="lname" name="lname" placeholder="Last Name" required><br>
                     </div>
 
-                    <input type="username" class="email2" name="username" placeholder="Username" required><br>
-                    <input type="email" class="email2" name="email2" placeholder="Enter Email Address" required><br>
+                    <input type="username" class="fname" name="username" placeholder="User Name" required><br>
+                    <input type="email" class="fname" name="email2" placeholder="Enter Email Address" required><br>
                     <input type="password" class="cpwd" name="cpwd" placeholder="Create a Password" required>
                     
                     <div class="pass">
@@ -80,4 +125,5 @@
 </body>
 </html>
 {% endblock %}
+
 <!-- update -->

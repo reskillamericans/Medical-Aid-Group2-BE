@@ -1,6 +1,15 @@
-.header {
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 16px;
+	color: #000000;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* .header {
     padding-left: 1em;
-    padding-top: 1em;
 }
 .img, .a {
     display: inline;
@@ -13,29 +22,124 @@
 #a .nav-logo, .logo-text {  
     color: black;
     font-family: 'Red Hat Display', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
-}
+} */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:rgb(245, 241, 241);
+    padding-bottom: 10px;
+  }
+  .dropdown {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .logo {
+      display: flex;
+  }
+  img{
+    width:30px;
+    padding-left: 5px;
+  }
+  h2{
+    display: inline-block;
+    font-size: 21px;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 0 0 32px;
+    transition: color 0.5s;
+    font-family: 'Red Hat Display', sans-serif;
+   
+    padding: 3px;
+  }
+  /* .no-dropdown a {
+     font-weight: bold;
+  } */
+  a:hover, a.selected {
+    background-color: #00c5b4;
+    color: white;
+    font-size: 18px;
+  }
+  a.selected, a {
+    border-radius: 7px;
+    padding: 10px;
+    margin-right: 1em;
+  }
+/* heading */
+.tab-switch {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tab-wrapper ul {
+    margin-bottom: 0px;
+    margin-top: 50px;
+    padding-left: 0px;
+    list-style: none;
+    }
+    .tab-wrapper li {
+        display: inline-block;
+    }
+  
+    .tab-wrapper a {
+        text-decoration: none;
+        font-weight: 600;
+        color: gray;
+        padding-bottom: 0.5em;
+    }
+  
+        .patient-link {
+          /* border-bottom: 3.5px solid #f3ea12; */
+          background-color: rgb(39, 196, 180, 0.7);
+          border: 2px solid #00c5b4;
+          margin-bottom: 12.5px;
+          padding: 15px 89px 15px 10px;
+        }
+  
+        .doc-link {
+          /* border-bottom: 3.5px solid #c3c7d2; */
+          background-color: rgb(225, 223, 223);
+          border: .5px solid;
+          border-color: rgb(179, 177, 177);
+          padding: 15px 87px 15px 10px;
+        }
+  
+        .doc-link:hover {
+          border-bottom: 3.5px solid #f3ea12;
+        }
+
 /* heading */
 
 .flex-container {
     display: flex;
 }
 .img, .doc-img {
-    margin-top: 76px;
-    max-width: 80%;
+    margin-top: 88px;
+    max-width: 70%;
     margin-left: 110px;
     width: 100%;
 }
 .signup-heading  {
-    /* margin-top: -60px; */
+    margin-top: -30px;
     margin-left: 3em;
     font-size: 40px;
     font-weight: bold;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 600;
 }
-
+*:focus {
+    outline: none;
+}
+input:focus{
+    background-color: rgb(178, 240, 226); 
+}
 .name-container {
     display: flex;
     font-family: 'Red Hat Display', sans-serif;
@@ -48,7 +152,7 @@
     font-size: 15px;
 }
 .fname {
-    padding-left: 10px; 
+    padding-left: 6px; 
     padding-top: 14px;
     padding-bottom: 14px;
     padding-right: 20px;
@@ -65,18 +169,18 @@
 .lname {
     padding-top: 14px;
     padding-bottom: 14px;
-    padding-left: 10px; 
+    padding-left: 5px; 
     padding-right: 20px;
     margin-left: 58px;
     margin-bottom: 20px;
 }
 
-.username, .email2, .cpwd {
+.phone, .username, .cpwd {
     background-color:rgb(245, 241, 241);
     padding-top: 14px;
     padding-bottom: 14px;
     padding-right: 280px;
-    padding-left: 10px; 
+    padding-left: 5px; 
     margin-bottom: 20px;
     border: 1px solid;
     border-color: rgb(223, 222, 222);
@@ -87,14 +191,16 @@
 .pass, .check-box{
     font-size: 20px;
 }
-/* .fname:hover, .lname:hover, .phone:hover, .email2:hover, .cpwd:hover {
-    background-color:rgb(178, 240, 226); ;
-  } */
+.fname:hover, .lname:hover, .username:hover, .email2:hover, .cpwd:hover {
+    /* background-color:rgb(178, 240, 226); */
+    border-color: rgb(178, 240, 226);
+  }
   .signup-btn:hover {
-    background-color: rgb(178, 240, 226); ;
+    background-color: rgb(178, 240, 226);
+   
   }
  .signup-btn  {
-    background-color: rgb(0,197,180);
+    background-color: rgb(42, 199, 183);
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 12px;
@@ -106,25 +212,112 @@
     font-weight: bold;
     font-size: 17px;
 }
-@media only screen and (max-width: 1024px) {
-    html,body {
-        margin:0;
-        padding:0;
-        overflow-x:hidden;
-    }
+@media only screen and (max-width: 768px) {
     .img, .doc-img {
         display: block;
         margin-left:auto;
         margin-right: auto;
         margin-top: -12px;
         margin-bottom: -15px;
-        max-width: 50%;
-    }
+         max-width: 60%; /*90% */
+        width: 100%;
+    } 
+    header {  
+        display: flex;
+        width: 100%;
+        margin-left: 0px;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+      header .dropdown {
+       display: inline;
+     }
+     header .no-dropdown {
+       display: none;
+     }
+     .navbar {
+       display: block;
+     }
+   /* Dropdown content (hidden by default) */
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     width: 300px;
+     height: 360px;
+     font-size: 22px;
+     font-weight: none;
+     border-radius: 15px;
+     background-color: #fff;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+   /* Links inside the dropdown */
+   .dropdown-content a {
+     float: none;
+     color: black;
+     padding: 16px 8px;
+     text-decoration: none;
+     display: block;
+     /* text-align: center; */
+     margin-left: auto;
+     margin-right: auto;
+   }
+   
+   /* Show the dropdown menu on hover */
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+   
+   
+      /* The dropdown container */
+   .dropdown {
+     float: left;
+     overflow: hidden;
+   }
+   
+   /* Dropdown button */
+   .dropdown .dropbtn {
+     border: none;
+     outline: none;
+     background-color: inherit;
+   }
+   
+   /* Add a background color to navbar links on hover */
+   .navbar a:hover {
+     background-color: #00c5b4;
+   }
+   
+   
+     
+      header img{
+          margin-top: 20px;
+          /* width:40px; */
+          margin-left: 146px;
+      }
+   
+      header h2{
+          margin-left: 10px;
+          margin-right: 0px;
+          margin-top: 28px;
+          margin-bottom: auto;
+          font-size: 16px;
+   
+      }
+    
+      header a {
+         display: block;
+          width:fit-content;
+          text-decoration: none;
+          margin: 10px;
+          padding: 0px;
+          margin-top: 10px;
+      }
+   .tab-wrapper {
+       display: none;
+   }
     .signup-heading  {
         margin-left: 6.5em;
         font-size: 20px;
-        margin-top: -16px;
-        margin-bottom: -16px;
     } 
     .flex-container {
        flex-direction: column;
@@ -132,8 +325,7 @@
        padding-bottom: 0px;
     }
     .container {
-        /* padding-top: 50px; */
-        /* padding-left: 15px; */
+        padding-top: 50px;
         margin-left:auto;
         margin-right: auto;
      }
@@ -169,7 +361,7 @@
         margin-bottom: -10px;
     }
     .signup-btn  {
-       /* margin-bottom: 14px; */
+       margin-bottom: 14px;
        margin-left: 85px;
        padding-bottom: 8px;
        padding-top: 8px;
@@ -177,4 +369,134 @@
     /*abc*/
     
  }
-/* update */
+ @media only screen and (min-width: 1470px) {
+    
+    .img, .doc-img {
+        /* display: block;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: -12px;
+        margin-bottom: -15px; */
+         max-width: 100%; /*90% */
+        /* width: 100%; */
+    } 
+    .signup-heading  {
+        /* margin-left: 6.5em; */
+        font-size: 50px;
+    } 
+    .flex-container {
+       /* flex-direction: column; */
+       align-items: flex-start;
+       padding-bottom: 0px;
+    }
+    .container {
+        padding-top: 50px;
+        margin-left:auto;
+        margin-right: auto;
+     }
+     .name-container {
+         display: block;
+         flex-direction: row;
+     }
+     .fname, .lname, .username, .email2, .cpwd {
+         font-size: 30px;
+     }
+     .fname {
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 141px;
+     }
+    .lname {
+         margin-left: 0px;
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 141px;
+     }
+     
+     .username, .email2, .cpwd {
+         padding-right: 141px;
+         margin-left: 18px;
+         margin-bottom: 10px;
+        
+     }
+     .pass {
+        /* font-size: 12px; */
+        margin-left: 18px;
+    }
+    .check-box{
+        /* font-size: 15px; */
+        margin-left: 13px;
+        margin-bottom: -10px;
+    }
+    .signup-btn  {
+       margin-bottom: 14px;
+       margin-left: 85px;
+       padding-bottom: 8px;
+       padding-top: 8px;
+    }
+    /*abc*/
+    
+ }
+/* @media only screen and (max-width: 1024px) {
+    .img, .doc-img {
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: -12px;
+        margin-bottom: -15px;
+        max-width: 60%;
+        width: 100%;
+    } 
+    .signup-heading  {
+        margin-left: 6.5em;
+        font-size: 20px;
+    } 
+    .flex-container {
+       flex-direction: column;
+       align-items: flex-start;
+       padding-bottom: 0px;
+    }
+    .container {
+        padding-top: 50px;
+        padding-left: 15px;
+        
+     }
+     .name-container {
+         display: block;
+         flex-direction: row;
+     }
+     .fname {
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 122px;
+     }
+    .lname {
+         margin-left: 0px;
+         margin-bottom: 10px;
+         margin-left: 18px;
+         padding-right: 122px;
+     }
+     
+     .phone, .email2, .cpwd {
+         padding-right: 141px;
+         margin-left: 18px;
+         margin-bottom: 10px;
+        
+     }
+     .pass {
+        font-size: 12px;
+        margin-left: 18px;
+    }
+    .check-box{
+        font-size: 15px;
+        margin-left: 13px;
+        margin-bottom: -10px;
+    }
+    .signup-btn  {
+       margin-bottom: 14px;
+       margin-left: 85px;
+       padding-bottom: 8px;
+       padding-top: 8px;
+    }
+     
+ } */
